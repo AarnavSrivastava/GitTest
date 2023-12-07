@@ -11,6 +11,7 @@ public class Main {
         } else {
             System.err.println("No arguments provided");
             System.exit(1);
+
         }
 
         int y = 0;
@@ -24,10 +25,14 @@ public class Main {
         } else {
             System.err.println("No second argument provided");
             System.exit(1);
+
         }
+
+
         
         AddingInterface ai = (int a, int b) -> {
             int sum = 0;
+
 
             for (int i = a; i <= b; i++) {
                 sum += i;
@@ -35,6 +40,7 @@ public class Main {
             
             return sum;
         };
+
         
         int sum = ai.sum(x, y);
         System.out.println(sum);
