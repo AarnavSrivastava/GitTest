@@ -26,7 +26,17 @@ public class Main {
             System.exit(1);
         }
         
-        AddingInterface ai = (int a, int b) -> a + b;
-        System.out.println("Sum of " + x + " and " + y + " is " + ai.sum(x, y));
+        AddingInterface ai = (int a, int b) -> {
+            int sum = 0;
+
+            for (int i = a; i <= b; i++) {
+                sum += i;
+            }
+            
+            return sum;
+        };
+        
+        int sum = ai.sum(x, y);
+        System.out.println(sum);
     }
 }
